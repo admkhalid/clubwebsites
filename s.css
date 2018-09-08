@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'consolas';
+    src: url(hinted-Consolas.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    vertical-align: baseline;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Poppins;
+}
+
+body {
+    width: 100%;
+    background: #0E0E0E;
+    color: white;
+}
+
+.rev-block {
+    position: absolute;
+}
+
+.rev-block span {
+    opacity: 0;
+    animation-name: text-reveal;
+    animation-timing-function: linear;
+    animation-duration: 0.000001s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    /* for firefox */
+    -moz-animation-name: text-reveal;
+    -moz-animation-timing-function: linear;
+    -moz-animation-duration: 0.000001s;
+    -moz-animation-delay: 1.5s;
+    -moz-animation-fill-mode: forwards;
+    /* opera */
+    -o-animation-name: text-reveal;
+    -o-animation-timing-function: linear;
+    -o-animation-duration: 0.000001s;
+    -o-animation-delay: 1.5s;
+    -o-animation-fill-mode: forwards;
+    /* both chrome and safari */
+    -webkit-animation-name: text-reveal;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 0.000001s;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.rev-block::after {
+    content: '';
+    top: 0%;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #76B600;
+    animation-name: block-reveal;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    -moz-animation-name: block-reveal;
+    -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 1s;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: block-reveal;
+    -o-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    -o-animation-duration: 1s;
+    -o-animation-delay: 1s;
+    -o-animation-fill-mode: forwards;
+    -webkit-animation-name: block-reveal;
+    -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #fff;
+    font-size: 48px;
+}
+
+p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* navbar */
+
+nav {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    position: fixed;
+    top: 0%;
+    background-color: #0E0E0E;
+    z-index: 1;
+}
+
+nav a {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* header */
+
+.screen1 {
+    height: 100vh;
+}
+
+header {
+    margin: 100px 0 120px 120px;
+    height: 20vh;
+}
+
+header p {
+    width: 60%;
+    margin-top: 10px;
+}
+
+.yellowSlogan {
+    color: #FDBD03;
+}
+
+.greenSlogan {
+    color: green;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* .work */
+
+/* a {
+    color: white;
+    text-decoration: none;
+} */
+
+.work {
+    text-align: center;
+    width: 100%;
+}
+
+.work img {
+    margin: 1%;
+    width: 45%;
+}
+
+.extraBackground {
+    height: 40vh;
+}
+
+/* header2 */
+
+.header2 {
+    margin: 40px 0 40px 40px;
+}
+
+.header2 h1 {
+    color: #FDBD03;
+    font-weight: 900;
+}
+
+/* .work2 */
+
+.work2 {
+    width: 100%;
+    text-align: center;
+}
+
+.work2 img {
+    margin: 1%;
+    width: 94%;
+}
+
+/* footer */
+
+span.register {
+    box-sizing: border-box;
+    border: 1px solid #FFBA00;
+    text-align: center;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #FFBA00;
+}
+
+.message {
+    margin-left: 50px;
+}
+
+footer p {
+    text-align: center;
+    color: grey;
+    margin: 60px auto;
+}
+
+footer a{
+    text-decoration: underline;
+}
+
+@keyframes text-reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes block-reveal {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+    50% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 991px) {
+    header {
+        text-align: left;
+        margin: 100px 0 100px 30px;
+    }
+    header h1 {
+        font-size: 36px;
+    }
+    header p {
+        font-size: 12px;
+        width: 90%;
+    }
+    .work img {
+        margin: 2%;
+        width: 90%;
+    }
+    .header2 {
+        margin: 40px 0 40px 12px;
+    }
+    .header2 h1 {
+        font-size: 36px;
+    }
+    .header2 p {
+        font-size: 12px;
+        width: 90%;
+    }
+    .work2 img {
+        margin: 2%;
+    }
+}
