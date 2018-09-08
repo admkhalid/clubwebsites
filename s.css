@@ -149,11 +149,6 @@ header p {
 
 /* .work */
 
-/* a {
-    color: white;
-    text-decoration: none;
-} */
-
 .work {
     text-align: center;
     width: 100%;
@@ -191,7 +186,18 @@ header p {
     width: 94%;
 }
 
+/*  registration button   */
+
+.header2 .regButton {
+    padding: 20px;
+    background-color: #FDBD03;
+}
+
 /* footer */
+
+div.regArea {
+    text-align: center;
+}
 
 span.register {
     box-sizing: border-box;
@@ -213,7 +219,7 @@ footer p {
     margin: 60px auto;
 }
 
-footer a{
+footer a {
     text-decoration: underline;
 }
 
