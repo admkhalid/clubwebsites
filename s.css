@@ -176,6 +176,11 @@ header p {
 
 /* .work2 */
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .work2 {
     width: 100%;
     text-align: center;
@@ -188,26 +193,25 @@ header p {
 
 /*  registration button   */
 
-.header2 .regButton {
+.buttonArea{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.regButton {
+    text-align: center;
     padding: 20px;
     background-color: #FDBD03;
+    color: black;
+    border-radius: 5px;
+}
+
+.regButton:hover {
+    background-color: rgb(255, 202, 42);
 }
 
 /* footer */
-
-div.regArea {
-    text-align: center;
-}
-
-span.register {
-    box-sizing: border-box;
-    border: 1px solid #FFBA00;
-    text-align: center;
-    color: black;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #FFBA00;
-}
 
 .message {
     margin-left: 50px;
